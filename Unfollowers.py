@@ -25,7 +25,7 @@ class UnfollowersBot:
                 .send_keys(password)
             self.driver.find_element_by_xpath('//button[@type="submit"]')\
                 .click()
-            # TODO: Check for two-factor authentication
+            sleep(2)
             self.driver.find_element_by_xpath("//button[contains(text(), 'Not Now')]")\
                 .click()
             sleep(2)
